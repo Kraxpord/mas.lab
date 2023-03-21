@@ -1,0 +1,182 @@
+#include <iostream> 
+#include <chrono> 
+#include <thread> 
+#include <time.h> 
+#include <Windows.h> 
+using namespace std;
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int columes, row, x, y;
+	int operation;
+	cout << "1-ex" << endl;
+	cout << "2-ex" << endl;
+	cout << "3-ex" << endl;
+	cout << "4-ex" << endl;
+	cout << "5-ex" << endl;
+	cout << "6-ex" << endl;
+	cout << "Enter operation ->>";
+	cin >> operation;
+	switch (operation)
+	{
+	case 1:
+	{int main();
+	{
+	int M, N;
+	cout << "Enter size of array A: ";
+	cin >> M;
+	cout << "Enter size of array B: ";
+	cin >> N;
+
+	int A[M], B[N], C[M + N];
+
+
+	cout << "Enter elements of array A: ";
+	for (int i = 0; i < M; i++) {
+		cin >> A[i];
+		C[i] = A[i];
+	}
+
+
+	cout << "Enter elements of array B: ";
+	for (int i = 0; i < N; i++) {
+		cin >> B[i];
+		C[M + i] = B[i];
+	}
+
+
+	cout << "Array C: ";
+	for (int i = 0; i < M + N; i++) {
+		cout << C[i] << " ";
+	}
+	cout << endl;
+	}
+	}break;
+	case 2:
+	{int main();
+	{
+		int M, N;
+		cout << "Enter size of array A: ";
+		cin >> M;
+		cout << "Enter size of array B: ";
+		cin >> N;
+
+		int A[M], B[N], C[min(M, N)];
+
+		
+		cout << "Enter elements of array A: ";
+		for (int i = 0; i < M; i++) {
+			cin >> A[i];
+		}
+
+		
+		cout << "Enter elements of array B: ";
+		for (int i = 0; i < N; i++) {
+			cin >> B[i];
+		}
+
+		
+		std::sort(A, A + M);
+		std::sort(B, B + N);
+
+		int k = 0;
+		for (int i = 0; i < M; i++) {
+			if (std::binary_search(B, B + N, A[i]) && !binary_search(C, C + k, A[i])) {
+				C[k] = A[i];
+				k++;
+			}
+		}
+		cout << "Array C: ";
+		for (int i = 0; i < k; i++) {
+			cout << C[i] << " ";
+			cout << endl;
+		}
+	}break;
+	case 3:
+	{#include <iostream>
+		using namespace std;
+
+	int* remove_even_numbers(int array[], int size) {
+		int* result = new int[size];
+		int index = 0;
+		for (int i = 0; i < size; i++) {
+			if (array[i] % 2 != 0) {
+				result[index] = array[i];
+				index++;
+			}
+		}
+		return result;
+	}
+
+	int* remove_odd_numbers(int array[], int size) {
+		int* result = new int[size];
+		int index = 0;
+		for (int i = 0; i < size; i++) {
+			if (array[i] % 2 == 0) {
+				result[index] = array[i];
+				index++;
+			}
+		}
+		return result;
+	}
+
+	void print_array(int array[], int size) {
+		for (int i = 0; i < size; i++) {
+			cout << array[i] << " ";
+		}
+		cout << endl;
+	}
+
+	int main() {
+		int M;
+		cout << "Enter the size of the array: ";
+		cin >> M;
+
+		int A[M];
+		cout << "Enter the elements of the array: ";
+		for (int i = 0; i < M; i++) {
+			cin >> A[i];
+		}
+
+		int choice;
+		cout << "Enter 1 to remove even numbers or 2 to remove odd numbers: ";
+		cin >> choice;
+
+		int* result;
+		if (choice == 1) {
+			result = remove_even_numbers(A, M);
+		}
+		else if (choice == 2) {
+			result = remove_odd_numbers(A, M);
+		}
+		else {
+			cout << "Invalid choice!" << endl;
+			return 0;
+		}
+
+		cout << "Resulting array: ";
+		print_array(result, M);
+
+		delete[] result;
+
+		return 0;
+	}
+	}break;
+	case 4:
+	{
+	}break;
+	case 5:
+	{
+	}break;
+	case 6:
+	{
+	}break;
+
+	default:
+		break;
+	}
+
+	return 0;
+}
